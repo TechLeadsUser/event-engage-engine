@@ -1,12 +1,6 @@
 import { Settings, Link2, Play, MessageCircle } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import agendaImage from "@/assets/agenda-gamification.jpg";
-
 const AgendaSection = () => {
   const topics = [{
     icon: Settings,
@@ -25,34 +19,24 @@ const AgendaSection = () => {
     title: "Q&A with Expert — Real Implementation Scenarios",
     description: "Get your questions answered and learn from actual implementation challenges and solutions. Benefit from real-world experience and practical insights."
   }];
-
   return <section className="py-16 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left: Image */}
           <div className="relative">
             <div className="rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-muted to-accent/20 p-8">
-              <img 
-                src={agendaImage} 
-                alt="Learning Progress Tracker" 
-                className="w-full h-auto rounded-2xl"
-              />
+              <img src={agendaImage} alt="Learning Progress Tracker" className="w-full h-auto rounded-2xl" />
             </div>
           </div>
 
           {/* Right: Content */}
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground leading-tight">
-              Master Oracle Fusion with Our Structured Learning Path
-            </h2>
+            <h2 className="text-4xl font-bold mb-8 text-foreground leading-tight md:text-3xl">What You'll Learn in This Session
+
+          </h2>
 
             <Accordion type="single" collapsible defaultValue="item-0" className="space-y-4">
-              {topics.map((topic, index) => (
-                <AccordionItem 
-                  key={index} 
-                  value={`item-${index}`}
-                  className="border border-border rounded-xl overflow-hidden bg-card shadow-sm hover:shadow-md transition-shadow"
-                >
+              {topics.map((topic, index) => <AccordionItem key={index} value={`item-${index}`} className="border border-border rounded-xl overflow-hidden bg-card shadow-sm hover:shadow-md transition-shadow">
                   <AccordionTrigger className="px-6 py-4 hover:no-underline bg-accent/5 hover:bg-accent/10 transition-colors">
                     <div className="flex items-center gap-4">
                       <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
@@ -64,8 +48,7 @@ const AgendaSection = () => {
                   <AccordionContent className="px-6 py-4 text-muted-foreground">
                     {topic.description}
                   </AccordionContent>
-                </AccordionItem>
-              ))}
+                </AccordionItem>)}
             </Accordion>
           </div>
         </div>

@@ -1,12 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/webinar/HeroSection";
+import OverviewSection from "@/components/webinar/OverviewSection";
+import AgendaSection from "@/components/webinar/AgendaSection";
+import TakeawaysSection from "@/components/webinar/TakeawaysSection";
+import SpeakerSection from "@/components/webinar/SpeakerSection";
+import RegistrationSection from "@/components/webinar/RegistrationSection";
+import RelatedWebinars from "@/components/webinar/RelatedWebinars";
+import FooterCTA from "@/components/webinar/FooterCTA";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <HeroSection />
+      <OverviewSection />
+      <AgendaSection />
+      <TakeawaysSection />
+      <SpeakerSection />
+      <RegistrationSection />
+      <RelatedWebinars />
+      <FooterCTA />
     </div>
   );
 };

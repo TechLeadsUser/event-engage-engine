@@ -1,50 +1,73 @@
-import { CheckCircle2, Settings, Link2, Play, MessageCircle } from "lucide-react";
+import { Settings, Link2, Play, MessageCircle } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import agendaImage from "@/assets/agenda-gamification.jpg";
+
 const AgendaSection = () => {
   const topics = [{
     icon: Settings,
     title: "Procurement Configuration and Workflow Setup",
-    description: "Learn the fundamentals of configuring procurement modules and setting up efficient workflows"
+    description: "Learn the fundamentals of configuring procurement modules and setting up efficient workflows. Master the core settings that will streamline your procurement operations."
   }, {
     icon: Link2,
     title: "Integrating Fusion SCM with ERP Modules",
-    description: "Master seamless integration techniques between SCM and other Oracle Fusion modules"
+    description: "Master seamless integration techniques between SCM and other Oracle Fusion modules. Discover best practices for connecting your procurement system with finance, inventory, and other critical modules."
   }, {
     icon: Play,
     title: "Live Demonstration: Purchase Requisition to Invoice Flow",
-    description: "Watch a complete end-to-end procurement process in action with real-time demonstrations"
+    description: "Watch a complete end-to-end procurement process in action with real-time demonstrations. See how transactions flow through the entire system from requisition to payment."
   }, {
     icon: MessageCircle,
     title: "Q&A with Expert — Real Implementation Scenarios",
-    description: "Get your questions answered and learn from actual implementation challenges and solutions"
+    description: "Get your questions answered and learn from actual implementation challenges and solutions. Benefit from real-world experience and practical insights."
   }];
+
   return <section className="py-16 px-4 bg-background">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4 text-primary md:text-3xl">
-            What You'll Learn in This Session
-          </h2>
-          <p className="text-muted-foreground max-w-4xl mx-auto text-lg">
-            A comprehensive curriculum designed to give you practical skills you can apply immediately
-          </p>
-        </div>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left: Image */}
+          <div className="relative">
+            <div className="rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-muted to-accent/20 p-8">
+              <img 
+                src={agendaImage} 
+                alt="Learning Progress Tracker" 
+                className="w-full h-auto rounded-2xl"
+              />
+            </div>
+          </div>
 
-        <div className="space-y-4 max-w-4xl mx-auto">
-          {topics.map((topic, index) => <div key={index} className="group bg-card p-6 rounded-xl shadow-card hover:shadow-hover transition-all duration-300 border-l-4 border-accent">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
-                  <topic.icon className="w-6 h-6 text-accent" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-2 text-foreground group-hover:text-accent transition-colors">
-                    {topic.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+          {/* Right: Content */}
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-foreground leading-tight">
+              Master Oracle Fusion with Our Structured Learning Path
+            </h2>
+
+            <Accordion type="single" collapsible defaultValue="item-0" className="space-y-4">
+              {topics.map((topic, index) => (
+                <AccordionItem 
+                  key={index} 
+                  value={`item-${index}`}
+                  className="border border-border rounded-xl overflow-hidden bg-card shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <AccordionTrigger className="px-6 py-4 hover:no-underline bg-accent/5 hover:bg-accent/10 transition-colors">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
+                        <topic.icon className="w-5 h-5 text-accent" />
+                      </div>
+                      <span className="text-lg font-semibold text-left">{topic.title}</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 py-4 text-muted-foreground">
                     {topic.description}
-                  </p>
-                </div>
-                <CheckCircle2 className="w-6 h-6 text-accent opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
-              </div>
-            </div>)}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </div>
     </section>;

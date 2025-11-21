@@ -31,9 +31,7 @@ const TakeawaysSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => <Card key={index} className="p-6 text-center bg-card shadow-card hover:shadow-hover transition-all duration-300 hover:-translate-y-1 group">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
-                <benefit.icon className="w-8 h-8 text-accent" />
-              </div>
+              
               <h3 className="text-xl font-semibold mb-3 text-foreground">
                 {benefit.title}
               </h3>

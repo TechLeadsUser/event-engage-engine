@@ -1,6 +1,7 @@
 import { Linkedin } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import speakerImage from "@/assets/krishna-v-speaker.png";
 
 const SpeakerSection = () => {
   return (
@@ -18,10 +19,12 @@ const SpeakerSection = () => {
         <Card className="max-w-4xl mx-auto overflow-hidden shadow-card hover:shadow-hover transition-shadow duration-300">
           <div className="grid md:grid-cols-5 gap-8 p-8">
             <div className="md:col-span-2 flex justify-center items-start">
-              <div className="w-48 h-48 rounded-2xl bg-gradient-hero overflow-hidden shadow-lg">
-                <div className="w-full h-full flex items-center justify-center text-white text-6xl font-bold">
-                  KV
-                </div>
+              <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-lg">
+                <img 
+                  src={speakerImage} 
+                  alt="Krishna V (Sudheer Vidiyala)" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             

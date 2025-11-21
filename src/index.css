@@ -9,45 +9,45 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 180 100% 6%;
+    --foreground: 200 100% 20%;
     
-    /* Oracle Fusion Brand Colors */
-    --brand-dark: 180 100% 13%;
-    --brand-medium: 180 82% 20%;
-    --brand-accent: 178 64% 37%;
+    /* Sky Blue Brand Colors */
+    --brand-dark: 200 98% 29%;
+    --brand-medium: 200 98% 39%;
+    --brand-accent: 200 98% 49%;
     
     --card: 0 0% 100%;
-    --card-foreground: 180 100% 6%;
+    --card-foreground: 200 100% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 180 100% 6%;
+    --popover-foreground: 200 100% 20%;
 
-    --primary: 180 100% 13%;
+    --primary: 200 98% 39%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 11% 97%;
-    --secondary-foreground: 180 100% 13%;
+    --secondary: 200 11% 97%;
+    --secondary-foreground: 200 98% 39%;
 
-    --muted: 180 11% 97%;
-    --muted-foreground: 180 6% 50%;
+    --muted: 200 11% 97%;
+    --muted-foreground: 200 6% 50%;
 
-    --accent: 178 64% 37%;
+    --accent: 200 98% 49%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 180 11% 90%;
-    --input: 180 11% 90%;
-    --ring: 178 64% 37%;
+    --border: 200 11% 90%;
+    --input: 200 11% 90%;
+    --ring: 200 98% 49%;
 
     --radius: 0.75rem;
     
     /* Custom Design Tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(180 100% 13%), hsl(180 82% 20%));
-    --gradient-cta: linear-gradient(135deg, hsl(178 64% 37%), hsl(180 82% 20%));
-    --shadow-card: 0 4px 20px rgba(4, 52, 51, 0.08);
-    --shadow-hover: 0 8px 30px rgba(33, 159, 156, 0.15);
+    --gradient-hero: linear-gradient(135deg, hsl(200 98% 29%), hsl(200 98% 39%));
+    --gradient-cta: linear-gradient(135deg, hsl(200 98% 49%), hsl(200 98% 39%));
+    --shadow-card: 0 4px 20px rgba(3, 105, 161, 0.08);
+    --shadow-hover: 0 8px 30px rgba(14, 165, 233, 0.15);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -61,37 +61,37 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 180 100% 6%;
+    --background: 200 100% 10%;
     --foreground: 0 0% 98%;
     
-    --brand-dark: 180 100% 13%;
-    --brand-medium: 180 82% 20%;
-    --brand-accent: 178 64% 37%;
+    --brand-dark: 200 98% 29%;
+    --brand-medium: 200 98% 39%;
+    --brand-accent: 200 98% 49%;
 
-    --card: 180 100% 8%;
+    --card: 200 100% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 180 100% 8%;
+    --popover: 200 100% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 178 64% 37%;
+    --primary: 200 98% 49%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 82% 15%;
+    --secondary: 200 82% 20%;
     --secondary-foreground: 0 0% 98%;
 
-    --muted: 180 82% 15%;
-    --muted-foreground: 180 6% 70%;
+    --muted: 200 82% 20%;
+    --muted-foreground: 200 6% 70%;
 
-    --accent: 178 64% 37%;
+    --accent: 200 98% 49%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 180 82% 15%;
-    --input: 180 82% 15%;
-    --ring: 178 64% 37%;
+    --border: 200 82% 20%;
+    --input: 200 82% 20%;
+    --ring: 200 98% 49%;
     
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;

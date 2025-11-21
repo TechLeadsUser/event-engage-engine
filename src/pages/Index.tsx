@@ -6,10 +6,8 @@ import SpeakerSection from "@/components/webinar/SpeakerSection";
 import RegistrationSection from "@/components/webinar/RegistrationSection";
 import RelatedWebinars from "@/components/webinar/RelatedWebinars";
 import FooterCTA from "@/components/webinar/FooterCTA";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <HeroSection />
       <OverviewSection />
       <AgendaSection />
@@ -17,9 +15,7 @@ const Index = () => {
       <SpeakerSection />
       <RegistrationSection />
       <RelatedWebinars />
-      <FooterCTA />
-    </div>
-  );
+      
+    </div>;
 };
-
 export default Index;

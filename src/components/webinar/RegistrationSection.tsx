@@ -9,15 +9,20 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { AlertCircle } from "lucide-react";
+import PhoneInput from "react-phone-number-input";
+import { isValidPhoneNumber } from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 const formSchema = z.object({
-  fullName: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Invalid email address"),
-  phone: z.string().min(10, "Phone number must be at least 10 digits"),
-  jobTitle: z.string().min(2, "Job title is required"),
-  company: z.string().min(2, "Company name is required"),
-  experience: z.string().min(1, "Please specify years of experience"),
-  message: z.string().optional(),
+  fullName: z.string().min(2, "Name must be at least 2 characters").max(100, "Name is too long"),
+  email: z.string().email("Invalid email address").max(255, "Email is too long"),
+  phone: z.string().refine((val) => {
+    if (!val) return false;
+    return isValidPhoneNumber(val);
+  }, "Please enter a valid phone number with country code"),
+  jobTitle: z.string().min(2, "Job title is required").max(100, "Job title is too long"),
+  company: z.string().min(2, "Company name is required").max(100, "Company name is too long"),
+  experience: z.string().min(1, "Please specify years of experience").max(50, "Experience is too long"),
+  message: z.string().max(1000, "Message is too long").optional(),
   subscribe: z.boolean().default(false)
 });
 const RegistrationSection = () => {
@@ -95,7 +100,13 @@ const RegistrationSection = () => {
               }) => <FormItem>
                       <FormLabel>Phone Number *</FormLabel>
                       <FormControl>
-                        <Input placeholder="+1 234 567 8900" {...field} />
+                        <PhoneInput
+                          international
+                          defaultCountry="US"
+                          value={field.value}
+                          onChange={field.onChange}
+                          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>} />

@@ -118,3 +118,28 @@ All colors MUST be HSL.
     font-family: 'Montserrat', sans-serif;
   }
 }
+
+/* Phone input custom styles */
+.PhoneInput {
+  @apply w-full;
+}
+
+.PhoneInputInput {
+  @apply flex h-10 w-full rounded-md border-0 bg-transparent px-3 py-2 text-base ring-0 placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm;
+}
+
+.PhoneInputCountry {
+  @apply mr-2;
+}
+
+.PhoneInputCountrySelect {
+  @apply bg-transparent border-0 focus:outline-none;
+}
+
+.PhoneInputCountryIcon {
+  @apply w-6 h-4;
+}
+
+.PhoneInputCountrySelectArrow {
+  @apply ml-1 opacity-50;
+}

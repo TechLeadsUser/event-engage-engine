@@ -35,20 +35,23 @@ const VideoTestimonialsSection = () => {
           {videoTestimonials.map((video, index) => <Card key={index} className="group overflow-hidden bg-card border-border/50 hover:shadow-hover transition-all duration-300 cursor-pointer">
               <div className="relative aspect-[4/5] overflow-hidden">
                 <img src={video.thumbnail} alt={video.name} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                
+                {/* Play button overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-dark/80 to-brand-medium/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
                     <Play className="w-8 h-8 text-white fill-white" />
                   </div>
                 </div>
+                
+                {/* Duration badge */}
                 <span className="absolute top-3 right-3 bg-background/90 backdrop-blur-sm px-2 py-1 rounded text-xs font-medium text-foreground">
                   {video.duration}
                 </span>
-              </div>
-              <div className="p-8 py-[8px] px-[16px]">
                 
-                <div>
-                  <p className="font-bold text-foreground text-xl">{video.name}</p>
-                  <p className="text-base text-muted-foreground">{video.designation}</p>
+                {/* Text overlay at bottom */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent p-6 pt-12">
+                  <p className="font-bold text-white text-xl mb-1">{video.name}</p>
+                  <p className="text-base text-white/90">{video.designation}</p>
                 </div>
               </div>
             </Card>)}

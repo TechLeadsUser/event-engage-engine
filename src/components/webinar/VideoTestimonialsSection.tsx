@@ -44,7 +44,7 @@ const VideoTestimonialsSection = () => {
                   {video.duration}
                 </span>
               </div>
-              <div className="p-8">
+              <div className="p-8 py-[8px] px-[16px]">
                 
                 <div>
                   <p className="font-bold text-foreground text-xl">{video.name}</p>

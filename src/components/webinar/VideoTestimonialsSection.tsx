@@ -44,11 +44,11 @@ const VideoTestimonialsSection = () => {
                   {video.duration}
                 </span>
               </div>
-              <div className="p-6">
+              <div className="p-8">
                 
                 <div>
-                  <p className="font-bold text-foreground">{video.name}</p>
-                  <p className="text-sm text-muted-foreground">{video.designation}</p>
+                  <p className="font-bold text-foreground text-xl">{video.name}</p>
+                  <p className="text-base text-muted-foreground">{video.designation}</p>
                 </div>
               </div>
             </Card>)}

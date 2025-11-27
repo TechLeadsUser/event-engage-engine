@@ -2,6 +2,7 @@ import HeroSection from "@/components/webinar/HeroSection";
 import OverviewSection from "@/components/webinar/OverviewSection";
 import AgendaSection from "@/components/webinar/AgendaSection";
 import TakeawaysSection from "@/components/webinar/TakeawaysSection";
+import WhoCanAttendSection from "@/components/webinar/WhoCanAttendSection";
 import SpeakerSection from "@/components/webinar/SpeakerSection";
 import TestimonialsSection from "@/components/webinar/TestimonialsSection";
 import VideoTestimonialsSection from "@/components/webinar/VideoTestimonialsSection";
@@ -16,6 +17,7 @@ const Index = () => {
       <OverviewSection />
       <AgendaSection />
       <TakeawaysSection />
+      <WhoCanAttendSection />
       <SpeakerSection />
       <TestimonialsSection />
       <VideoTestimonialsSection />

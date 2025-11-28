@@ -2,19 +2,19 @@ import { Play } from "lucide-react";
 import { Card } from "@/components/ui/card";
 const VideoTestimonialsSection = () => {
   const videoTestimonials = [{
-    thumbnail: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=450&fit=crop",
+    thumbnail: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&h=450&fit=crop",
     name: "Priya Sharma",
     designation: "Senior SCM Consultant at TCS",
     quote: "The practical approach helped me implement Oracle Fusion in real projects",
     duration: "2:30"
   }, {
-    thumbnail: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=450&fit=crop",
+    thumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=450&fit=crop",
     name: "David Thompson",
     designation: "Oracle Fusion Lead at Accenture",
     quote: "Best training I've attended. Clear explanations and hands-on examples",
     duration: "3:15"
   }, {
-    thumbnail: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&h=450&fit=crop",
+    thumbnail: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=450&fit=crop",
     name: "Anita Desai",
     designation: "ERP Implementation Manager",
     quote: "Krishna's expertise and teaching style made complex topics easy to understand",

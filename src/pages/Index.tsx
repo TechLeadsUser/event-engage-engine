@@ -12,6 +12,7 @@ import FAQSection from "@/components/webinar/FAQSection";
 import RegistrationSection from "@/components/webinar/RegistrationSection";
 import RelatedWebinars from "@/components/webinar/RelatedWebinars";
 import FooterCTA from "@/components/webinar/FooterCTA";
+import NewsletterSection from "@/components/webinar/NewsletterSection";
 const Index = () => {
   return <div className="min-h-screen bg-background">
       <HeroSection />
@@ -26,6 +27,7 @@ const Index = () => {
       
       <FAQSection />
       <RegistrationSection />
+      <NewsletterSection />
       <RelatedWebinars />
       
     </div>;

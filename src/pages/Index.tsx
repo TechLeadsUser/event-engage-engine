@@ -21,7 +21,7 @@ const Index = () => {
       <SpeakerSection />
       <TestimonialsSection />
       <VideoTestimonialsSection />
-      <PastSessionsSection />
+      
       <FAQSection />
       <RegistrationSection />
       <RelatedWebinars />

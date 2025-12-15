@@ -1,4 +1,5 @@
 import HeroSection from "@/components/webinar/HeroSection";
+import QuickDemoForm from "@/components/webinar/QuickDemoForm";
 import OverviewSection from "@/components/webinar/OverviewSection";
 import AgendaSection from "@/components/webinar/AgendaSection";
 import TakeawaysSection from "@/components/webinar/TakeawaysSection";
@@ -14,6 +15,7 @@ import FooterCTA from "@/components/webinar/FooterCTA";
 const Index = () => {
   return <div className="min-h-screen bg-background">
       <HeroSection />
+      <QuickDemoForm />
       <OverviewSection />
       <AgendaSection />
       <TakeawaysSection />

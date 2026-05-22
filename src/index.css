@@ -2,53 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Design system - all colors HSL */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 200 100% 20%;
-    
-    /* Sky Blue Brand Colors */
-    --brand-dark: 200 98% 29%;
-    --brand-medium: 200 98% 39%;
-    --brand-accent: 200 98% 49%;
-    
+    --background: 210 40% 98%;
+    --foreground: 217 24% 14%;
+
+    /* Brand palette */
+    --brand-dark: 211 100% 24%;   /* #003D7A */
+    --brand-medium: 211 100% 32%; /* #0052A3 */
+    --brand-accent: 188 100% 50%; /* #00D9FF cyan */
+    --brand-orange: 16 100% 60%;  /* #FF6B35 */
+
     --card: 0 0% 100%;
-    --card-foreground: 200 100% 20%;
+    --card-foreground: 217 24% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 100% 20%;
+    --popover-foreground: 217 24% 14%;
 
-    --primary: 200 98% 39%;
+    --primary: 211 100% 32%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 200 11% 97%;
-    --secondary-foreground: 200 98% 39%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 211 100% 32%;
 
-    --muted: 200 11% 97%;
-    --muted-foreground: 200 6% 50%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 214 14% 51%;
 
-    --accent: 200 98% 49%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 188 100% 50%;
+    --accent-foreground: 211 100% 24%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 200 11% 90%;
-    --input: 200 11% 90%;
-    --ring: 200 98% 49%;
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 188 100% 50%;
 
-    --radius: 0.75rem;
-    
-    /* Custom Design Tokens */
-    --gradient-hero: linear-gradient(135deg, hsl(200 98% 29%), hsl(200 98% 39%));
-    --gradient-cta: linear-gradient(135deg, hsl(200 98% 49%), hsl(200 98% 39%));
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(200 60% 97%));
-    --shadow-card: 0 4px 20px rgba(3, 105, 161, 0.08);
-    --shadow-hover: 0 8px 30px rgba(14, 165, 233, 0.15);
+    --radius: 0.875rem;
+
+    /* Custom tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(211 100% 32%), hsl(211 100% 20%));
+    --gradient-cta: linear-gradient(135deg, hsl(16 100% 60%), hsl(188 100% 50%));
+    --gradient-cta-reverse: linear-gradient(135deg, hsl(188 100% 50%), hsl(211 100% 32%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    --gradient-soft-blue: linear-gradient(180deg, hsl(210 100% 97%), hsl(0 0% 100% / 0));
+
+    --shadow-card: 0 4px 20px -4px hsl(211 100% 32% / 0.08);
+    --shadow-hover: 0 18px 40px -12px hsl(211 100% 32% / 0.25);
+    --shadow-glow-cyan: 0 0 30px hsl(188 100% 50% / 0.45);
+    --shadow-glow-orange: 0 0 30px hsl(16 100% 60% / 0.4);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -62,48 +68,35 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 200 100% 10%;
-    --foreground: 0 0% 98%;
-    
-    --brand-dark: 200 98% 29%;
-    --brand-medium: 200 98% 39%;
-    --brand-accent: 200 98% 49%;
+    --background: 217 33% 8%;
+    --foreground: 210 40% 98%;
 
-    --card: 200 100% 12%;
-    --card-foreground: 0 0% 98%;
-    
-    --gradient-card: linear-gradient(135deg, hsl(200 100% 12%), hsl(200 90% 18%));
+    --card: 217 33% 12%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 200 100% 12%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 217 33% 12%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 200 98% 49%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 188 100% 50%;
+    --primary-foreground: 217 33% 8%;
 
-    --secondary: 200 82% 20%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 217 33% 16%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 200 82% 20%;
-    --muted-foreground: 200 6% 70%;
+    --muted: 217 33% 16%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 200 98% 49%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 188 100% 50%;
+    --accent-foreground: 217 33% 8%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 62% 40%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 200 82% 20%;
-    --input: 200 82% 20%;
-    --ring: 200 98% 49%;
-    
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 217 33% 20%;
+    --input: 217 33% 20%;
+    --ring: 188 100% 50%;
+
+    --gradient-card: linear-gradient(135deg, hsl(217 33% 12%), hsl(217 33% 16%));
   }
 }
 
@@ -112,37 +105,93 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
-    font-family: 'Montserrat', sans-serif;
+  html {
+    scroll-behavior: smooth;
   }
-  
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', 'Poppins', system-ui, sans-serif;
+  }
+
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    @apply tracking-tight;
   }
 }
+
+@layer utilities {
+  .hover-lift {
+    @apply transition-all duration-300;
+  }
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .glass-card {
+    background: hsl(0 0% 100% / 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(0 0% 100% / 0.5);
+  }
+
+  .gradient-text {
+    background: var(--gradient-cta);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .cta-glow:hover {
+    box-shadow: var(--shadow-glow-cyan);
+  }
+
+  .animate-cta-gradient {
+    background: linear-gradient(90deg, hsl(16 100% 60%), hsl(188 100% 50%), hsl(16 100% 60%));
+    background-size: 200% 100%;
+    animation: gradient-shift 3s ease infinite;
+  }
+}
+
+/* Keyframes */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 hsl(188 100% 50% / 0.5); }
+  50% { box-shadow: 0 0 0 12px hsl(188 100% 50% / 0); }
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-fade-in-up { animation: fade-in-up 0.6s ease-out both; }
+.animate-slide-in-left { animation: slide-in-left 0.6s ease-out both; }
+.animate-pulse-glow { animation: pulse-glow 2s infinite; }
 
 /* Phone input custom styles */
-.PhoneInput {
-  @apply w-full;
-}
-
+.PhoneInput { @apply w-full; }
 .PhoneInputInput {
   @apply flex h-10 w-full rounded-md border-0 bg-transparent px-3 py-2 text-base ring-0 placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm;
 }
-
-.PhoneInputCountry {
-  @apply mr-2;
-}
-
-.PhoneInputCountrySelect {
-  @apply bg-transparent border-0 focus:outline-none;
-}
-
-.PhoneInputCountryIcon {
-  @apply w-6 h-4;
-}
-
-.PhoneInputCountrySelectArrow {
-  @apply ml-1 opacity-50;
-}
+.PhoneInputCountry { @apply mr-2; }
+.PhoneInputCountrySelect { @apply bg-transparent border-0 focus:outline-none; }
+.PhoneInputCountryIcon { @apply w-6 h-4; }
+.PhoneInputCountrySelectArrow { @apply ml-1 opacity-50; }

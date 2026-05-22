@@ -15,6 +15,8 @@ export default {
     extend: {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
+        sans: ['Inter', 'Poppins', 'system-ui', 'sans-serif'],
+        display: ['Poppins', 'Inter', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -26,6 +28,7 @@ export default {
           dark: "hsl(var(--brand-dark))",
           medium: "hsl(var(--brand-medium))",
           accent: "hsl(var(--brand-accent))",
+          orange: "hsl(var(--brand-orange))",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
